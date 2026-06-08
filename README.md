@@ -6,10 +6,10 @@
 ## ¿Por qué es REST?
 No es "solo una API" porque el protocolo HTTP tiene un significado específico para cada método. Si usas Postman para enviar estos métodos, estás cumpliendo con los principios de una API REST:
 
-GET (Lectura): Obtienes datos del servidor.
-POST (Creación): Envías nuevos datos para crear un recurso.
-PUT (Actualización): Envías datos para reemplazar un recurso existente.
-DELETE (Eliminación): Solicitas borrar un recurso.
+GET (Lectura): Obtienes datos del servidor.<br>
+POST (Creación): Envías nuevos datos para crear un recurso.<br>
+PUT (Actualización): Envías datos para reemplazar un recurso existente.<br>
+DELETE (Eliminación): Solicitas borrar un recurso.<br>
 
 ## 🌐 Tecnologías utilizadas  
 
