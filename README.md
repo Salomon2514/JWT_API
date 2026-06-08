@@ -6,10 +6,17 @@ Integración con Seguridad en APIs con JWT (Arquitectura Stateless)
 ## ¿Qué es el Payload?
 El nombre Payload significa literalmente "carga útil". Es la parte central del JWT donde viaja la información que el servidor quiere "recordar" sobre el usuario después de que este se ha logueado.
 En tu código, el payload es el array asociativo que contiene tres tipos de datos:
-###	Claims Registrados (estándares):
-o	iss (Issuer): Quién emite el token (en tu caso, tu servidor local).
-o	iat (Issued At): Cuándo fue creado el token (usando time()).
-o	exp (Expiration): Cuándo dejará de ser válido (en tu caso, time() + 3600 segundos, o sea, 1 hora).
-•	Claims Privados (los tuyos):
-o	data: Aquí es donde metes la información personalizada del usuario (id, usuario, rol).
-¡Importante! NUNCA pongas la contraseña (clave) dentro del payload. Aunque el JWT está firmado, no está cifrado (cualquiera que tenga el token puede leer el contenido usando herramientas como jwt.io). Por eso, solo guardas datos de identidad que no comprometan la seguridad.
+
+1. Claims Registrados (Estándar)
+Son campos definidos por el protocolo JWT para asegurar la integridad y validez temporal del token:
+
+iss (Issuer): Identifica a la entidad emisora del token (en este entorno, nuestro servidor local).
+iat (Issued At): Registra el timestamp exacto (usando time()) de cuándo fue emitido el token.
+exp (Expiration): Define el tiempo límite de validez. En nuestra implementación, se establece en time() + 3600, otorgando una sesión activa de 1 hora.
+
+2. Claims Privados (Personalizados)
+Contienen la información específica de negocio necesaria para la sesión del usuario:
+data: Objeto que encapsula la identidad y permisos, conteniendo:
+id: Identificador único del usuario en la base de datos.
+usuario: Nombre de usuario (ej. admin).
+rol: Perfil de acceso (ej. profesor).
