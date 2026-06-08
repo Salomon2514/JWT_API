@@ -6,7 +6,7 @@ Integración con Seguridad en APIs con JWT (Arquitectura Stateless)
 ## ¿Qué es el Payload?
 El nombre Payload significa literalmente "carga útil". Es la parte central del JWT donde viaja la información que el servidor quiere "recordar" sobre el usuario después de que este se ha logueado.
 En tu código, el payload es el array asociativo que contiene tres tipos de datos:
-•	Claims Registrados (estándares):
+###	Claims Registrados (estándares):
 o	iss (Issuer): Quién emite el token (en tu caso, tu servidor local).
 o	iat (Issued At): Cuándo fue creado el token (usando time()).
 o	exp (Expiration): Cuándo dejará de ser válido (en tu caso, time() + 3600 segundos, o sea, 1 hora).
