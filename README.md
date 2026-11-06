@@ -72,6 +72,9 @@ Contienen la información específica de negocio necesaria para la sesión:
  - usuario: Nombre de usuario (ej. admin).
  - rol: Perfil de acceso (ej. profesor).
 
+   <img width="912" height="903" alt="image" src="https://github.com/user-attachments/assets/d6bf49df-b55a-423c-922d-c8d01340399a" />
+
+
  ## Postman
  
  <img width="1522" height="761" alt="image" src="https://github.com/user-attachments/assets/adc0fed3-360b-4e00-aa19-35b697d07c50" />
